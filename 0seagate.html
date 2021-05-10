@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Real Estate Development in the NYC Floodplain</title>
+
+    <!-- Load Leaflet CSS -->
+    <link
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      rel="stylesheet"
+    />
+
+    <!-- Load Leaflet and Carto libraries -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://libs.cartocdn.com/carto.js/v4.2.0/carto.min.js"></script>
+
+    <!-- Load Promises polyfill -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+
+    <!-- import the webpage's javascript file -->
+
+    <script src="./script2.js" defer></script>
+
+    <!-- Load our styles -->
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body class="about">
+    <div class="map-wrapper">
+      <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+
+        <div class="dropdown">
+          <button class="dropbtn">Neighborhoods of Interest</button>
+          <div class="dropdown-content">
+            <a href="0coney.html">Coney Island</a>
+            <a href="0fidi.html">Financial District</a>
+            <a href="0oceanbreeze.html">Ocean Breeze</a>
+            <a href="0redhook.html">Red Hook</a>
+            <a href="0rockaway.html">Rockaway Peninsula</a>
+            <a href="0seagate.html">Seagate</a>
+          </div>
+        </div>
+
+        <a href="about.html">About this Map</a>
+        <a href="rememberedplaces.html">Remembered Places</a>
+        <a href="contact.html">Contact</a>
+
+        <h4 align="right">
+          Mapping Real Estate Development in the NYC Floodplain
+        </h4>
+      </div>
+      <div id="map"></div>
+
+      <div class="description-container" align="left">
+        <h2>
+          "I don’t think a day goes by [when] people don’t worry"
+        </h2>
+        <p />
+        <i
+          >"As its name suggests, Sea Gate is a gated community. Before the
+          storm it was known for its safety. Its beaches are private, and
+          separating the neighborhood's relatively affluent suburbs from Coney
+          Island's high rises and public housing is a tall chain link fence.
+          Residents could enter from two locations, both of which were monitored
+          closely by Sea Gate's own police force. Today that security is in
+          tatters. The once fortified perimeter is full of holes, which
+          Maldonado suspects the looters used to enter Sea Gate. One of the
+          community's entrances has been closed and residents driving into Sea
+          Gate on Thursday were greeted by police officers warming themselves
+          around a burning garbage bin."</i
+        >
+        (<a
+          href="https://www.theguardian.com/world/2012/nov/03/hurricane-sandy-brooklyn-sea-gate"
+          target="_blank"
+          >x</a
+        >)
+        <p />
+        <i
+          >"Today, Sea Gate is still stuck in a middle ground—not quite rebuilt,
+          not quite abandoned. There are empty lots all along its coast, or
+          houses still vacant, and just next door, a brand new building. One
+          house might have a nice sea wall, but if its neighbor only has a bunch
+          of scrap wood, both places are going to flood together."</i
+        >
+        (<a
+          href="https://ny.curbed.com/2017/10/27/16556084/hurricane-sandy-anniversary-sea-gate-brooklyn-photos"
+          target="_blank"
+          >x</a
+        >)
+        <p />
+        <i
+          >"Are Sea Gate, Coney Island, and Brighton Beach defensible in the
+          face of the probabilities associated with climate change? “Absolutely
+          not,” says Keenan. “It’ll be a completely spatial segregation of the
+          haves and have nots around their buildings’ engineering capacity and
+          the weather.”"</i
+        >
+        (<a
+          href="https://www.fastcompany.com/90257901/six-years-after-sandy-a-rising-tide-of-development-puts-coney-island-at-risk"
+          target="_blank"
+          >x</a
+        >)
+      </div>
+
+      <div class="photo-container" align="center">
+        <img
+          src="https://cdn.glitch.com/f9625d8f-3bfa-4918-bd97-0430d1d1fb7b%2F4_2012_sea_gate_DSC_4785.webp?v=1620661524776"
+          alt="A row of houses along the beach in Sea Gate immediately after Hurricane Sandy."
+        />
+        <p />
+        <small>Photo by Nathan Kensinger</small>
+        <p />
+        <img src="https://cdn.glitch.com/f9625d8f-3bfa-4918-bd97-0430d1d1fb7b%2F557812_381081748632598_749418784_n.jpeg?v=1620661772730" alt="Seagate residents walking alongside destroyed homes after Sandy" />
+        <p />
+        <small>Photo by VINnews</small>
+        <p />
+        <img src="https://cdn.glitch.com/f9625d8f-3bfa-4918-bd97-0430d1d1fb7b%2FScreen%20Shot%202021-05-10%20at%2011.51.15%20AM.png?v=1620661904693" alt="Seagate residents on the beach post-Sandy" />
+        <p />
+        <small>Photo by Natan Dvir</small>
+        <p />
+      </div>
+    </div>
+  </body>
+</html>

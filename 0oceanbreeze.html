@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Real Estate Development in the NYC Floodplain</title>
+
+    <!-- Load Leaflet CSS -->
+    <link
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      rel="stylesheet"
+    />
+
+    <!-- Load Leaflet and Carto libraries -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://libs.cartocdn.com/carto.js/v4.2.0/carto.min.js"></script>
+
+    <!-- Load Promises polyfill -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+
+    <!-- import the webpage's javascript file -->
+
+    <script src="./script2.js" defer></script>
+
+    <!-- Load our styles -->
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body class="about">
+    <div class="map-wrapper">
+      <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+
+        <div class="dropdown">
+          <button class="dropbtn">Neighborhoods of Interest</button>
+          <div class="dropdown-content">
+            <a href="0coney.html">Coney Island</a>
+            <a href="0fidi.html">Financial District</a>
+            <a href="0oceanbreeze.html">Ocean Breeze</a>
+            <a href="0redhook.html">Red Hook</a>
+            <a href="0rockaway.html">Rockaway Peninsula</a>
+            <a href="0seagate.html">Seagate</a>
+          </div>
+        </div>
+
+        <a href="about.html">About this Map</a>
+        <a href="rememberedplaces.html">Remembered Places</a>
+        <a href="contact.html">Contact</a>
+
+        <h4 align="right">
+          Mapping Real Estate Development in the NYC Floodplain
+        </h4>
+      </div>
+      <div id="map"></div>
+
+      <div class="description-container" align="left">
+        <h2>
+          "We had some good times here,and that’s why it’s so hard. It’s hard
+          when somebody says, ‘Take the buyout and run.’ I’m not gonna find
+          another place like this… but when so many people are affected… I have
+          four members in my family, and we’re all in the same boat."
+        </h2>
+        <p />
+        <i
+          >"In the immediate aftermath of Sandy, Ocean Breeze and the
+          neighborhoods around it were completely devastated, with homes
+          destroyed, local residents drowned, and the survivors clearly
+          traumatized by the storm. There were hot tubs in trees, homes pushed
+          into the middle of the street, cars with their windows busted out by
+          the water. In those early days after the storm, it was clear that the
+          residents of Ocean Breeze were dedicated to returning and rebuilding
+          their community. In the years to come, though, red tape and a slow
+          recovery process resulted in another kind of trauma, with residents
+          trapped in a homeless limbo. Their frustration was palpable, and
+          resulted in most of Ocean Breeze deciding to head in a much different
+          direction, agreeing to sell their homes to the New York state
+          government, so that their houses could be permanently demolished as
+          part of a 'managed retreat.'"</i
+        >
+        (<a
+          href="https://ny.curbed.com/2017/10/25/16528286/hurricane-sandy-staten-island-ocean-breeze-photos"
+          target="_blank"
+          >x</a
+        >)
+        <p />
+        <i
+          >It’s a warm and sunny morning in early October 2013, almost a year
+          after Hurricane Sandy struck the east coast of the United States. As I
+          walk down Seaview Avenue, navigating sidewalks overgrown with weeds
+          and tall grass, I smell the ocean before I can see it. I turn the
+          corner and see three people arranging hand-painted signs around a
+          large white tent. The signs identify them as the Ocean Breeze Buyout
+          Committee, one of several resident-led groups on Staten Island that
+          are making the case against rebuilding their shorefront neighborhoods.
+          Instead, they want the government to buy out their houses, restore
+          wetlands, and create open public spaces that would offer protection
+          from future storms. They face opposition, not from fellow residents
+          who want to stay, but from a New York City administration that wants
+          to redevelop rather than retreat from the coast. Every weekend, the
+          Ocean Breeze Buyout Committee sets up an information tent and
+          encourages passersby to sign letters indicating their interest in a
+          buyout. The tent provides a place for residents to gather, to support
+          each other, and to speak with journalists and local politicians.
+          Today, a crowd gathers quickly. 'I don’t want to live through it
+          again,'' one man says to me, adding, 'even if the buyout is a financial
+          wash for me, I would prefer the land going back to nature, so it
+          doesn’t happen to another family twenty, thirty years down the
+          road.'”</i
+        >
+        (<a
+          href="https://metropolitics.org/Fighting-for-Retreat-after-Sandy.html"
+          target="_blank"
+          >x</a
+        >)
+        <p />
+        <i>"On [Joe] Herrnkind’s section of the street, only one home remains out of eight. 'Around here, 90 percent of each block went,' he says, 'and only one or two people stayed.' Just down the street from where Herrnkind used to live, more turkeys mill about on empty lots where homes used to be."</i>
+        (<a href="https://slate.com/technology/2017/10/the-staten-island-community-that-didnt-rebuild-after-sandy.html" target="_blank">x</a>)
+      </div>
+
+      <div class="photo-container" align="center">
+        <img
+          src="https://cdn.glitch.com/f9625d8f-3bfa-4918-bd97-0430d1d1fb7b%2Fillu-koslov-2-20c6d.jpeg?v=1620654527672"
+          alt="A sign in Ocean Breeze counts the number of days that residents have been displaced."
+        />
+        <p />
+        <small>Photo by Liz Koslov</small>
+        <p />
+        <img
+          src="https://cdn.glitch.com/f9625d8f-3bfa-4918-bd97-0430d1d1fb7b%2F2_2012_Ocean_Breeze_DSC_3975.webp?v=1620654820395"
+          alt="An Ocean Breeze home decimated by Hurricane Sandy"
+        />
+        <p />
+        <small>Photo by Nathan Kensinger</small>
+        <p />
+        <img
+          src="https://cdn.glitch.com/f9625d8f-3bfa-4918-bd97-0430d1d1fb7b%2Fb12613683.width-1200.jpg?v=1620655018064"
+          alt="[Top] A hot tub lies in a pile of debris on November 1, 2012 in the Ocean Breeze area of the Staten Island borough of New York City. [Bottom] Jerry Dada looks towards where his home had been before it was damaged by Hurricane Sandy and then torn down October 17, 2013"
+        />
+        <p />
+        <small>Photo by Getty Images</small>
+        <p />
+      </div>
+    </div>
+  </body>
+</html>

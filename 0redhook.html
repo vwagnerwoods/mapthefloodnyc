@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Real Estate Development in the NYC Floodplain</title>
+
+    <!-- Load Leaflet CSS -->
+    <link
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      rel="stylesheet"
+    />
+
+    <!-- Load Leaflet and Carto libraries -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://libs.cartocdn.com/carto.js/v4.2.0/carto.min.js"></script>
+
+    <!-- Load Promises polyfill -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+
+    <!-- import the webpage's javascript file -->
+
+    <script src="./script2.js" defer></script>
+
+    <!-- Load our styles -->
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body class="about">
+    <div class="map-wrapper">
+      <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+
+        <div class="dropdown">
+          <button class="dropbtn">Neighborhoods of Interest</button>
+          <div class="dropdown-content">
+            <a href="0coney.html">Coney Island</a>
+            <a href="0fidi.html">Financial District</a>
+            <a href="0oceanbreeze.html">Ocean Breeze</a>
+            <a href="0redhook.html">Red Hook</a>
+            <a href="0rockaway.html">Rockaway Peninsula</a>
+            <a href="0seagate.html">Seagate</a>
+          </div>
+        </div>
+
+        <a href="about.html">About this Map</a>
+        <a href="rememberedplaces.html">Remembered Places</a>
+        <a href="contact.html">Contact</a>
+
+        <h4 align="right">
+          Mapping Real Estate Development in the NYC Floodplain
+        </h4>
+      </div>
+      <div id="map"></div>
+
+      <div class="description-container" align="left">
+        <h2>
+          "Five years after the storm, [Barry] O’Meara said that Sandy was the
+          beginning of the end for the neighborhood. Then he corrected himself:
+          'There’s no such thing as a fucking end. But it was the beginning of
+          something different.'"
+        </h2>
+        <p />
+        <i
+          >"Hurricane Sandy, in 2012, offered a grim preview of Red Hook’s
+          future. The storm, which devastated areas all over New York and left
+          43 dead in the city, hit Red Hook particularly hard. As water gushed
+          out of sewers and into streets, parks and basements, residents were
+          forced to remember that Red Hook used to be a tidal marsh and that
+          old, hidden creeks still stream under the asphalt like veins under the
+          city’s skin."</i
+        >
+        (<a
+          href="https://www.theguardian.com/environment/2018/sep/25/red-hook-climate-change-floodplain-hurricane-sandy-gentrification"
+          target="_blank"
+          >x</a
+        >)
+        <p />
+        <i
+          >"In Red Hook and Sunset Park, AECOM recently [in 2016] released a
+          plan to place 30-50,000 units of new housing on the waterfront—25
+          percent of it affordable—as well as subsidize a new subway stop, and
+          implement green and gray infrastructure for coastal protection and
+          flood management. Arguing for the plan as a boost to Mayor de Blasio’s
+          OneNYC ambition to build 200,000 affordable units by 2020, the
+          proposal also runs counter to the idea of limiting exposure to areas
+          of growing risk."</i
+        >
+        (<a href="" target="_blank">x</a>)
+        <p />
+        <i
+          >"The truth is that with the seas around New York pegged to rise by
+          several feet by the end of the century, there may be no truly
+          long-term future for waterfront neighborhoods like Red Hook—at least,
+          no future that resembles the present. 'The only answer is going to be
+          to plan for the inevitable on sea-level rise, and that could mean
+          retreat from the shoreline,' says Nicolas Coch, a coastal geology
+          expert at Queens College in New York. 'But no one wants to think about
+          that.'"</i
+        >
+        (<a
+          href="https://thebridgebk.com/red-hook-after-sandy-flourishing-but-vulnerable/"
+          target="_blank"
+          >x</a
+        >)
+      </div>
+
+      <div class="photo-container" align="center">
+        <img
+          src="https://cdn.glitch.com/f9625d8f-3bfa-4918-bd97-0430d1d1fb7b%2F121029_5267-e1508777751352.jpeg?v=1620656610931"
+          alt="Dwight Street in Red Hook, flooded"
+        />
+        <p />
+        <small>Photo by Alan Chin</small>
+        <p />
+        <img src="https://cdn.glitch.com/f9625d8f-3bfa-4918-bd97-0430d1d1fb7b%2FRed-Hook-Sandy-lg.jpeg?v=1620656974426" alt="A flooded Pioneer St., Red Hook" />
+        <p />
+        <small>Photo by Gotham Gazette</small>
+        <p />
+        <img src="https://cdn.glitch.com/f9625d8f-3bfa-4918-bd97-0430d1d1fb7b%2FScreen%20Shot%202021-05-10%20at%2010.31.25%20AM.png?v=1620657099453" alt="A sign in Red Hook that reads: 'Hey ma! You ready to talk about climate change now?'" />
+        <p />
+        <small>Photo by "The Backyard Geographer"</small>
+        <p />
+      </div>
+    </div>
+  </body>
+</html>

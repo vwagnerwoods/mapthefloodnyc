@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Real Estate Development in the NYC Floodplain</title>
+
+    <!-- Load Leaflet CSS -->
+    <link
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      rel="stylesheet"
+    />
+
+    <!-- Load Leaflet and Carto libraries -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://libs.cartocdn.com/carto.js/v4.2.0/carto.min.js"></script>
+
+    <!-- Load Promises polyfill -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+
+    <!-- import the webpage's javascript file -->
+
+    <script src="./script2.js" defer></script>
+
+    <!-- Load our styles -->
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body class="about">
+    <div class="map-wrapper">
+      <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+
+        <div class="dropdown">
+          <button class="dropbtn">Neighborhoods of Interest</button>
+          <div class="dropdown-content">
+            <a href="0coney.html">Coney Island</a>
+            <a href="0fidi.html">Financial District</a>
+            <a href="0oceanbreeze.html">Ocean Breeze</a>
+            <a href="0redhook.html">Red Hook</a>
+            <a href="0rockaway.html">Rockaway Peninsula</a>
+            <a href="0seagate.html">Seagate</a>
+          </div>
+        </div>
+
+        <a href="about.html">About this Map</a>
+        <a href="rememberedplaces.html">Remembered Places</a>
+        <a href="contact.html">Contact</a>
+
+        <h4 align="right">
+          Mapping Real Estate Development in the NYC Floodplain
+        </h4>
+      </div>
+      <div id="map"></div>
+     
+      <div class="description-container" align="left">
+        <h2>
+          "At this point you’re like, ‘well what do you do?’"
+        </h2>
+        <p />
+          <i
+          >"The power is out. Con Edison shut it down around 6:30 P.M. Monday night. Thanks, at least in part, to the power explosion at 14th Street, we won't likely regain electricity for as many as seven days. The howling wind wasn't to blame and neither was the rain, which consisted mostly of mist.  It was the record 13.88-foot storm surge of seawater that barreled across my neighborhood, pouring salt water into the subways and the basements of buildings."</i
+        >
+        (<a
+          href="https://www.forbes.com/sites/morganbrennan/2012/10/30/a-residents-post-hurricane-sandy-tour-of-wall-street/?sh=709f34da7172" target="_blank"
+          >x</a
+        >)
+        <p />
+        <i
+          >"According to The Wall Street Journal, the Lower Manhattan district endured a 14-foot storm surge that put approximately 40 buildings out of commission. Businesses like Morgan Stanley, American International Group Inc., and Sullivan & Cromwell LLP were among those affected by Sandy. Many companies have retreated to Midtown Manhattan or asked their employees to work from home. These are temporary solutions for what has the potential to be a long term problem. "</i
+        >
+        (<a
+          href="https://www.elegran.com/blog/2012/11/hurricane-sandy-uproots-tenants-and-businesses-in-financial-district" target="_blank"
+          >x</a
+        >)
+        <p />
+          <i
+          >"As some buildings bounce back and others await those major repairs, there is no comprehensive accounting of every building in the Seaport and Financial District
+that remains shuttered this week. But a visual survey by the Trib on Nov. 13 found that from the Brooklyn Bridge to the Battery, in a nearly one-mile stretch east of Pearl Street, almost every building and business is closed, including numerous high-rise office buildings."</i
+        >
+        (<a
+          href="http://www.tribecatrib.com/content/weeks-after-storm-much-seaport-fidi-remains-shut-down" target="_blank"
+          >x</a
+        >)
+        
+        
+    
+      </div>
+
+      <div class="photo-container" align="center">
+        <img
+          src="https://cdn.glitch.com/f9625d8f-3bfa-4918-bd97-0430d1d1fb7b%2F80fffdec-154985108.jpeg?v=1620616875441"
+          alt="Flooded parking garage in FiDi"
+        /> <p /><small>Photo by Andrew Burton/Getty Images</small> <p />
+             <img
+          src="https://cdn.glitch.com/f9625d8f-3bfa-4918-bd97-0430d1d1fb7b%2F121102_02_21_25_IMG_8445.0.jpg?v=1620617425111"
+          alt="The Brooklyn Bridge and a delapidated seaport"
+        /> <p /><small>Photo by Max Touhey</small> <p />
+               <img
+          src="https://cdn.glitch.com/f9625d8f-3bfa-4918-bd97-0430d1d1fb7b%2Fsandy121105_intro_560.jpeg?v=1620617489629"
+          alt="Post-Sandy blackout"
+        /> <p /><small>Photo by  Iwan Baan/New York Magazine</small> <p />
+       
+        
+      </div>
+    </div>
+  </body>
+</html>

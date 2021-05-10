@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Real Estate Development in the NYC Floodplain</title>
+
+    <!-- Load Leaflet CSS -->
+    <link
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      rel="stylesheet"
+    />
+
+    <!-- Load Leaflet and Carto libraries -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://libs.cartocdn.com/carto.js/v4.2.0/carto.min.js"></script>
+
+    <!-- Load Promises polyfill -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+
+    <!-- import the webpage's javascript file -->
+
+    <script src="./script2.js" defer></script>
+
+    <!-- Load our styles -->
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body class="about">
+    <div class="map-wrapper">
+      <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+
+        <div class="dropdown">
+          <button class="dropbtn">Neighborhoods of Interest</button>
+          <div class="dropdown-content">
+            <a href="0coney.html">Coney Island</a>
+            <a href="0fidi.html">Financial District</a>
+            <a href="0oceanbreeze.html">Ocean Breeze</a>
+            <a href="0redhook.html">Red Hook</a>
+            <a href="0rockaway.html">Rockaway Peninsula</a>
+            <a href="0seagate.html">Seagate</a>
+          </div>
+        </div>
+        <a href="about.html">About this Map</a>
+        <a href="rememberedplaces.html">Remembered Places</a>
+        <a href="contact.html">Contact</a>
+
+        <h4 align="right">
+          Mapping Real Estate Development in the NYC Floodplain
+        </h4>
+      </div>
+      <div id="map"></div>
+
+      <div class="description-container" align="left">
+        <h2>
+          “If a storm happened tomorrow, we’d still get flooded”
+        </h2>
+        <p />
+        <i
+          >"During the early evening of Monday, October 29, Hurricane Sandy
+          reached Coney Island. With her, she brought a 14-foot storm surge,
+          which drove the waves of the Atlantic Ocean over the sands of Coney
+          Island Beach, over the wooden planks of the boardwalk, through the
+          rides, games and attractions of the amusement parks, and onto Surf
+          Avenue. By 7 PM, the streets were desolate. Just before 8 o’clock,
+          power went out. At 9, seawater was covering cars. [...] Flood water
+          had forced vehicles onto the sidewalks and, in a few cases, crushed
+          them against trees and utility polls. If a window or windshield hadn’t
+          been broken, condensation from water pooled inside the car collected
+          on the glass, creating the impression of past lives. Many times, the
+          owners had scribbled insurance information on the front or back
+          windshield, which, in an odd way, made the vehicles resemble
+          tombstones."</i
+        >
+        (<a
+          href="https://thoughtcatalog.com/arvind-dilawar/2012/11/14-photos-of-the-coney-island-boardwalk-12-days-after-hurricane-sandy/" target="_blank"
+          >x</a
+        >)
+        <p />
+        <i
+          >"While the lights have turned on in lower Manhattan and limited
+          subway access has resumed in parts of Brooklyn, here in Coney Island,
+          the recovery has hardly begun. A cloud of uncertainty hangs over the
+          future of the Wonder Wheel and the Cyclone roller coaster, the freak
+          show, the arcades and the people. For now, rescue workers around the
+          city are focused on saving lives, but the government has already begun
+          taking stock of property damage. The people of Coney Island are
+          worried that this odd, out-of-the-way, and often overlooked place will
+          again be forgotten. Like everyone who values the history of this
+          American icon, they believe these buildings and rides are worth far
+          more than the old materials that they’re made of."</i
+        >(<a
+          href="https://www.huffpost.com/entry/hurricane-sandy-coney-island_n_2069243" target="_blank"
+          >x</a
+        >)
+        <p />
+        <i
+          >"Flood-prevention infrastructure in the People’s Playground remains
+          far from completion seven years after Superstorm Sandy devastated
+          Coney Island, and what safeguards do exist won’t protect against a
+          Sandy-sized storm — leaving residents vulnerable to flooding for years
+          to come, according to advocates."</i
+        >(<a
+          href="https://www.brooklynpaper.com/coney-island-remains-unguarded-on-sandys-seven-year-anniversary/" target="_blank"
+          >x</a
+        >)
+      </div>
+
+      <div class="photo-container" align="center">
+        <img
+          src="https://cdn.glitch.com/f9625d8f-3bfa-4918-bd97-0430d1d1fb7b%2Fbn-coney-island-flood-preparedness-2019-11-01-bk03-lg_i.jpeg?v=1620615492719"
+          alt="Coney Island Boardwalk"
+        /> <p /><small>Photo by Paul Martinka</small> <p />
+        <img
+          src="https://cdn.glitch.com/f9625d8f-3bfa-4918-bd97-0430d1d1fb7b%2F10.jpeg?v=1620615789170"
+          alt="Coney Island Boardwalk"
+        /> <p /><small>Photo by John Huntington</small> <p />
+         <img
+          src="https://cdn.glitch.com/f9625d8f-3bfa-4918-bd97-0430d1d1fb7b%2F02-coney-island-subway-station-entrancetop.jpeg?v=1620615948445"
+          alt="Coney Island Boardwalk"
+        /> <p /><small>Photo by Arvind Dilawar</small> <p />
+        
+        
+      </div>
+    </div>
+  </body>
+</html>

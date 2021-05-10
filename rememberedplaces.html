@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Real Estate Development in the NYC Floodplain</title>
+
+    <!-- Load Leaflet CSS -->
+    <link
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      rel="stylesheet"
+    />
+
+    <!-- Load Leaflet and Carto libraries -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://libs.cartocdn.com/carto.js/v4.2.0/carto.min.js"></script>
+
+    <!-- Load Promises polyfill -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+
+    <!-- Load Fetch polyfill -->
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.4/fetch.js"></script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.1.0/nouislider.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- import the webpage's javascript file -->
+
+    <script src="./script4.js" defer></script>
+
+    <!-- Load our styles -->
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">Neighborhoods of Interest</button>
+          <div class="dropdown-content">
+            <a href="0coney.html">Coney Island</a>
+            <a href="0fidi.html">Financial District</a>
+            <a href="0oceanbreeze.html">Ocean Breeze</a>
+            <a href="0redhook.html">Red Hook</a>
+            <a href="0rockaway.html">Rockaway Peninsula</a>
+            <a href="0seagate.html">Seagate</a>
+          </div>
+        </div>
+
+        <a href="about.html">About this Map</a>
+        <a class="active" href="rememberedplaces.html">Remembered Places</a>
+        <a href="contact.html">Contact</a>
+
+        <h4 align="right">
+          Mapping Real Estate Development in the NYC Floodplain
+        </h4>
+      </div>
+    
+    <div class="remembered-container">
+      
+      
+      <h2>
+        This map depicts submissions from community members that detail memories of places affected by flooding.
+      </h2>
+<p />
+      If you have a place that you would like to pay homage to, you can submit a description through <a href="contact.html">this contact form</a>.
+      <p />
+      
+    </div>
+    <div id="map"></div>
+    
+     <div class="legend">
+        <div class="legend-header">
+          Map Legend
+        </div>
+       <div>
+         <img
+          class="custommarker"
+          src="https://cdn.glitch.com/f9625d8f-3bfa-4918-bd97-0430d1d1fb7b%2Fletter.svg"
+        /><span class="legendB-marker"></span> Remembered Place <p />
+       </div>
+       <div>
+          <span class="legend-marker2"></span> 2050s 500-year Floodplain Prediction
+          <p></p>
+       </div>
+       <div>
+          <span class="legend-marker3"></span> Sandy-Afflicted Neighborhood of Interest
+          <p></p>
+       </div>
+        </div>
+    
+  </body>
+</html>
+

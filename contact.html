@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Real Estate Development in the NYC Floodplain</title>
+
+    <!-- Load Leaflet CSS -->
+    <link
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      rel="stylesheet"
+    />
+
+    <!-- Load Leaflet and Carto libraries -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://libs.cartocdn.com/carto.js/v4.2.0/carto.min.js"></script>
+
+    <!-- Load Promises polyfill -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+
+    <!-- Load Fetch polyfill -->
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.4/fetch.js"></script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.1.0/nouislider.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- import the webpage's javascript file -->
+
+    <script src="./script2.js" defer></script>
+
+    <!-- Load our styles -->
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="sidebar">
+      
+      <a href="index.html" class="btn-primary">Back to Home</a>  
+      
+      <form action="https://docs.google.com/forms/d/e/1FAIpQLScFox0jkRV5F8S3AIsnAf9NLAMyqNinmPTMW3-9ZK2f8EY3VQ/formResponse"
+      target="_self"
+      id="bootstrapForm"
+      method="POST">
+    <fieldset>
+        <h2>Contact<br><small></small></h2>
+    </fieldset>
+
+
+    <!-- Field type: "short" id: "1013157129" -->
+    <fieldset>
+        <legend for="1013157129">Name/Alias</legend>
+        <div class="form-group">
+            <input id="373787626" type="text" name="entry.373787626" class="form-control" required>
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "short" id: "1878831716" -->
+    <fieldset>
+        <legend for="1878831716">Email</legend>
+        <div class="form-group">
+            <input id="975376598" type="text" name="entry.975376598" class="form-control" >
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "paragraph" id: "250127979" -->
+    <fieldset>
+        <legend for="250127979">Comments, questions, etc. go here</legend>
+        <div class="form-group">
+            <textarea id="1821612321" name="entry.1821612321" class="form-control" ></textarea>
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "choices" id: "1322498566" -->
+    <fieldset>
+        <legend for="1322498566">Has a place in NYC that you care for (your home, a business, etc.) been affected negatively by a flood event?</legend>
+        <div class="form-group">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="entry.1174326168" value="Yes" >
+                    Yes
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="entry.1174326168" value="No" >
+                    No
+                </label>
+            </div>
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "short" id: "347739498" -->
+    <fieldset>
+        <legend for="347739498">If yes, what was the name of the place?</legend>
+        <div class="form-group">
+            <input id="936657682" type="text" name="entry.936657682" class="form-control" >
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "paragraph" id: "1990795590" -->
+    <fieldset>
+        <legend for="1990795590">Describe how the flooding event affected you and/or the place.</legend>
+        <div class="form-group">
+            <textarea id="1752167982" name="entry.1752167982" class="form-control" ></textarea>
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "short" id: "792218116" -->
+    <fieldset>
+        <legend for="792218116"></legend>
+        <div class="form-group">
+            <input id="291740923" type="hidden" name="entry.291740923" class="form-control latitude-field" >
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "short" id: "707983634" -->
+    <fieldset>
+        <legend for="707983634"></legend>
+        <div class="form-group">
+            <input id="1050014582" type="hidden" name="entry.1050014582" class="form-control longitude-field" >
+        </div>
+    </fieldset>
+
+    <input type="hidden" name="fvv" value="1">
+    <input type="hidden" name="fbzx" value="7271320809082977290">
+    <!--
+        CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+        This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+        Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+        We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+    -->
+    <input type="hidden" name="pageHistory" value="0">
+
+        Feel free to click on the map to indicate the location of the place you have in mind. (Note: multiple places will require multiple submissions)
+        <p />To see what others have contributed, click <a href="rememberedplaces.html"> here</a>.<p />
+    <input class="btn btn-primary" type="submit" value="Submit">
+</form>
+      
+
+      <p />
+      
+    </div>
+    <div id="map"></div>
+  </body>
+</html>
+
