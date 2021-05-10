@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Real Estate Development in the NYC Floodplain</title>
+
+    <!-- Load Leaflet CSS -->
+    <link
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      rel="stylesheet"
+    />
+
+    <!-- Load Leaflet and Carto libraries -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://libs.cartocdn.com/carto.js/v4.2.0/carto.min.js"></script>
+
+    <!-- Load Promises polyfill -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+
+    <!-- Load Fetch polyfill -->
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.4/fetch.js"></script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.1.0/nouislider.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- import the webpage's javascript file -->
+
+    <script src="./script.js" defer></script>
+
+    <!-- Load our styles -->
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="map-wrapper">
+      <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">Neighborhoods of Interest</button>
+          <div class="dropdown-content">
+            <a href="0coney.html">Coney Island</a>
+            <a href="0fidi.html">Financial District</a>
+            <a href="0oceanbreeze.html">Ocean Breeze</a>
+            <a href="0redhook.html">Red Hook</a>
+            <a href="0rockaway.html">Rockaway Peninsula</a>
+            <a href="0seagate.html">Seagate</a>
+          </div>
+        </div>
+
+        <a href="about.html">About this Map</a>
+        <a href="rememberedplaces.html">Remembered Places</a>
+        <a href="contact.html">Contact</a>
+
+        <h4 align="right">
+          Mapping Real Estate Development in the NYC Floodplain
+        </h4>
+      </div>
+
+      <div id="map"></div>
+
+      <div class="button-container">
+        <b>Toggle by use:</b>
+
+        <div class="buttons">
+          <button class="residential-button">
+            Residential
+          </button>
+          <button class="commercial-button">
+            Commercial
+          </button>
+          <button class="reset-button">
+            All
+          </button>
+        </div>
+        <p />
+      </div>
+
+      <div class="slider-container">
+        <b><h3>Toggle by estimated construction cost:</h3></b>
+        <p />
+        <br />
+        <div id="price-slider"></div>
+      </div>
+
+      <div class="legend">
+        <div class="legend-header">
+          Map Legend
+        </div>
+        <div>
+          <span class="legend-marker"></span> Active Building Constructions
+          <p></p>
+          <span class="legend-marker2"></span> 2050s 500-year Floodplain
+          Prediction
+          <p></p>
+          <span class="legend-marker3"></span> Sandy-Afflicted Neighborhood of
+          Interest
+        </div>
+        <p />
+        <!-- Trigger/Open The Modal -->
+        <button id="popup">About This Data</button>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <b>Q: What data was used to create this map?</b>
+            <p />
+            <blockquote>
+              This map uses point data provided by the NYC Department of
+              Buildings'
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www1.nyc.gov/assets/buildings/html/nyc-active-major-construction.html"
+                >Active Major Constructions Database</a
+              >
+              to portray new constructions as of March 2021.
+              <p />
+              Sea level rise predictions were sourced from
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://data.cityofnewyork.us/Environment/Sea-Level-Rise-Maps-2050s-500-year-Floodplain-/qwca-zqw3"
+                >NYC Opendata Sea Level Rise Maps</a
+              >, detailing the 2050s 500-year Floodplain prediction for New York
+              City.
+              <p />
+              Neighborhood polygons were drawn in
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://thenewschool.carto.com/u/vicwoods/builder/6de3934b-b426-4e0e-a05e-f07329129d31/embed"
+                >Carto</a
+              >
+              and approximated by the author's consultation of Google Maps,
+              recognizing that neighborhood boundaries are fluid and
+              ever-changing.
+            </blockquote>
+            <p />
+            <b>Q: What is a 500-year floodplain, exactly?</b>
+            <p />
+            <blockquote>
+              Sparing technicalities, a 500-year floodplain depicts areas that
+              would be affected by a 500-year flood (a type of flood with a one
+              in 500 chance of occurring in any given year).
+            </blockquote>
+            <p />
+            <b
+              >Q: Are there any flaws in the "xxx-year floodplain" prediction
+              model?</b
+            >
+            <p />
+            <blockquote>
+              Definitely; there is a growing literature on this topic. Check
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://slate.com/technology/2017/09/heres-why-femas-flood-maps-are-so-terrible.html"
+                >this article</a
+              >
+              for a starting point; 
+              
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.washingtonpost.com/weather/2020/06/29/flood-risk-climate-change/"
+                >this article</a
+              >
+              and 
+              
+              
+              
+               <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://fivethirtyeight.com/features/its-time-to-ditch-the-concept-of-100-year-floods/ "
+                >this article</a
+              >
+              also offer
+              enlightening answers to this question. 
+            </blockquote>
+            <p />
+            <b
+              >Q: Is there a reason why the 500-year floodplain model was chosen
+              as opposed to the 100-year floodplain (a less extreme model)?</b
+            >
+            <p />
+            <blockquote>
+              This "extreme" choice was made in an attempt to address the
+              concerns mentioned above from critics that view FEMA's floodplain
+              predictions as far too conservative for our constantly
+              accelerating climate reality.
+            </blockquote>
+            <p />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.1.0/nouislider.min.js"></script>
+  </body>
+</html>

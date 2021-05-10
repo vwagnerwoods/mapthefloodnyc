@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Real Estate Development in the NYC Floodplain</title>
+
+    <!-- Load Leaflet CSS -->
+    <link
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      rel="stylesheet"
+    />
+
+    <!-- Load Leaflet and Carto libraries -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://libs.cartocdn.com/carto.js/v4.2.0/carto.min.js"></script>
+
+    <!-- Load Promises polyfill -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+
+    <!-- import the webpage's javascript file -->
+
+    <script src="./script2.js" defer></script>
+
+    <!-- Load our styles -->
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body class="about">
+    <div class="map-wrapper">
+      <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+
+        <div class="dropdown">
+          <button class="dropbtn">Neighborhoods of Interest</button>
+          <div class="dropdown-content">
+            <a href="0coney.html">Coney Island</a>
+            <a href="0fidi.html">Financial District</a>
+            <a href="0oceanbreeze.html">Ocean Breeze</a>
+            <a href="0redhook.html">Red Hook</a>
+            <a href="0rockaway.html">Rockaway Peninsula</a>
+            <a href="0seagate.html">Seagate</a>
+          </div>
+        </div>
+
+        <a href="about.html">About this Map</a>
+        <a href="rememberedplaces.html">Remembered Places</a>
+        <a href="contact.html">Contact</a>
+
+        <h4 align="right">
+          Mapping Real Estate Development in the NYC Floodplain
+        </h4>
+      </div>
+      <div id="map"></div>
+
+      <div class="description-container" align="left">
+        <h2>
+          "Its like a bad dream that I can't wake up from."
+        </h2>
+        <p />
+        <i
+          >"Where the beach ends and city begins is no longer clear. The
+          boardwalk, which runs nearly the entire length of the nation’s largest
+          urban beach is gone — the concrete pillars that held up the wood
+          structure are all that’s left of the icon of the Rockaways. Sections
+          of the boardwalk, with lampposts and benches still attached, now sit
+          along sand-covered Shore Front Parkway and lodged on side streets, as
+          far as Rockaway Beach Boulevard in some places."</i
+        >
+        (<a
+          href="https://www.qchron.com/editions/south/rockaway-peninsula-devastated-by-hurricane-sandy/article_8e93a604-0ca6-58ab-8695-1c4b8621ab23.html"
+          target="_blank"
+          >x</a
+        >)
+        <p />
+        <i
+          >"t’s hard to overstate the contrast between the destruction in
+          Rockaway and the post-storm scene in other parts of the city. While
+          just a few miles inland, stores were open and bustling, and people
+          were going about their business as though nothing had happened,
+          residents of Rockaway were gathering on the beach, where waves had
+          ripped the boardwalk from its concrete mooring and smashed it into the
+          beachfront homes. "</i
+        >
+        (<a
+          href="https://www.huffpost.com/entry/hurricane-sandy-rockaways_n_2046414"
+          target="_blank"
+          >x</a
+        >)
+        <p />
+        <i
+          >"After Sandy, relief funds served the more affluent sections of the
+          peninsula, leaving many poor residents unable to rebuild or remain. A
+          study by the John Jay College of Criminal Justice comparing Rockaway’s
+          post-storm recovery to that of low-income communities in Manhattan’s
+          Lower East Side found that the latter neighborhood was better able to
+          advocate for funds, thanks to established network of
+          anti-gentrification activism. Isolated and segregated, the Rockaways
+          experienced more of a shock. <br /> Today, the most rapidly changing
+          section—the blocks with the board shops, wine bars, and $120
+          hand-stitched swimsuits—is smack in the middle of the peninsula. In
+          spite of the persistent hurricane threat, home prices have gone up and
+          up since Sandy. While plenty of year-rounders welcome the amenities
+          and economic boost, it’s an uneasy balance for others. In 2014, a
+          young rapper named Sean Blaise released a music video lambasting the
+          'Nazi pizzerias' and 'white bro' taco stands that were supplanting the
+          businesses he knew from his youth. 'It all centers around this
+          idealized vision of a beach community. They turned it into some
+          behemoth fake paradise of surf culture and fish tacos,' he told
+          Gothamist at the time."</i
+        >
+        (<a href="https://www.motherjones.com/environment/2019/08/superstorm-sandy-was-one-of-the-worst-and-best-things-to-happen-to-rockaway-beach/" target="_blank">x</a>)
+      </div>
+
+      <div class="photo-container" align="center">
+        <img
+          src="https://cdn.glitch.com/f9625d8f-3bfa-4918-bd97-0430d1d1fb7b%2F50930f1de7697.image.jpg?v=1620659113312"
+          alt="Intersection of Irving and Oceanside, where an inferno passed through during Hurricane Sandy"
+        />
+        <p />
+        <small>Photo by Riyad Hasan</small>
+        <p />
+        <img
+          src="https://cdn.glitch.com/f9625d8f-3bfa-4918-bd97-0430d1d1fb7b%2F5244582105e84.image.jpg?v=1620659256511"
+          alt="Rockaway boardwalk damaged by Hurricane Sandy"
+        />
+        <p />
+        <small>Photo credit unknown </small>
+        <p />
+        <img
+          src="https://cdn.glitch.com/f9625d8f-3bfa-4918-bd97-0430d1d1fb7b%2F01_kensinger_rockaways_sandy_DSC_3642.0.webp?v=1620659405958"
+          alt="An oceanfront home of The Rockaways has been almost completely demolished by Hurricane Sand"
+        />
+        <p />
+        <small>Photo by Nathan Kensinger</small>
+        <p />
+      </div>
+    </div>
+  </body>
+</html>

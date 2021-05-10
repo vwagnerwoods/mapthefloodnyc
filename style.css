@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
+
+body {
+  font-family: "Inconsolata", monospace;
+  font-weight: 100;
+  color: #FFF8F0;
+  margin: 0px;
+  background: #000000;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+body.about {
+  overflow: hidden;
+}
+
+h1 {
+  color: #A7FF19;
+  font-family: "Inconsolata", monospace;
+  font-weight: 100;
+  font-size: 18px;
+}
+
+h2 {
+  font-style: italic;
+  color: #A7FF19;
+  font-size: 24px;
+  font-family: "Inconsolata", monospace;
+  font-weight: 100;
+}
+
+h3 {
+  color: #FFF8F0;
+  font-family: "Inconsolata", monospace;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+h4 {
+  line-height: 0px;
+  font-style: italic;
+  color: #A7FF19;
+  font-size: 18px;
+  font-family: "Inconsolata", monospace;
+  font-weight: 100;
+  word-break:break-all;
+}
+
+#map {
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #000000;
+  overflow: hidden;
+  padding: 7px;
+  height: 5%;
+  z-index: 99999999999999999999;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  z-index: 99999999999999999999999999999;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #A7FF19;
+  color: black;
+  height: 5%;
+  z-index: 9999999999999999999999999999999;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #00000;
+  color: #FFF8F0;
+  z-index: 9999999999999999999999999999;
+}
+
+.map-wrapper {
+  position: relative;
+  z-index: 5000000000000000000;
+}
+:root {
+  --mainColor: #A7FF19;
+}
+
+a {
+  color: var(--mainColor);
+  text-decoration: none;
+}
+
+button {
+  font-family: "Inconsolata", monospace;
+  font-style: italic;
+  background-color: #A7FF19;
+  border-color: #A7FF19;
+  color: black;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 15px;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.btn-primary {
+  font-family: "Inconsolata", monospace;
+  font-style: italic;
+  background-color: #A7FF19;
+  border-color: #A7FF19;
+  color: black;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 15px;
+  display: inline-block;
+  font-size: 12px;
+}
+.sidebar {
+  background: #000000;
+  width: 30%;
+  height: 100%;
+  opacity: 100%;
+  padding: 25px;
+  padding-bottom: 30px;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  justify-content: flex-start;
+  align-items: baseline;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 500;
+}
+
+.about-container {
+  background: black;
+  opacity: 0.98;
+  font-size: 18px;
+  width: 450px;
+  height: 300px;
+  padding: 30px;
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+  left: 480px;
+  top: 225px;
+  z-index: 500;
+  border: 10px solid #232323;
+  
+}
+
+.description-container {
+  background: #000000;
+  width: 30%;
+  height: 50%;
+  opacity: 98%;
+  padding: 25px;
+  padding-bottom: 30px;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  justify-content: flex-start;
+  align-items: baseline;
+  position: fixed;
+  left: 100px;
+  top: 175px;
+  z-index: 0;
+  border: 10px solid #232323;
+}
+
+.remembered-container {
+  background: #000000;
+  width: 20%;
+  height: 40%;
+  opacity: 98%;
+  padding: 25px;
+  padding-bottom: 30px;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  justify-content: flex-start;
+  align-items: baseline;
+  position: fixed;
+  left: 75px;
+  top: 175px;
+  z-index: 50;
+  border: 10px solid #232323;
+}
+
+.photo-container {
+  background: #000000;
+  width: 30%;
+  height: 50%;
+  opacity: 98%;
+  padding: 25px;
+  padding-bottom: 30px;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  justify-content: flex-start;
+  align-items: baseline;
+  position: fixed;
+  right: 100px;
+  top: 175px;
+  z-index: 0;
+  border: 10px solid #232323;
+}
+
+.button-container {
+  background: black;
+  opacity: 0.98;
+  font-size: 14px;
+  width: 300px;
+  height: 60px;
+  padding: 20px;
+  position: fixed;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  left: 0px;
+  bottom: 0px;
+  z-index: 500;
+  
+}
+
+.slider-container {
+  background: black;
+  opacity: 0.98;
+  font-size: 14px;
+  width: 200px;
+  height: 400px;
+  padding: 15px;
+  padding-bottom: 25px;
+  position: fixed;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  left: 0px;
+  top: 100px;
+  z-index: 0;
+  
+}
+
+/*legend */
+
+.legend {
+  background: black;
+  color: #FFF8F0;
+  opacity: 95%;
+  font-size: 14px;
+  padding: 10px;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 2000000;
+}
+
+.legend-header {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.legend-marker {
+  display: inline-block;
+  background: #A7FF19;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+}
+
+.legend-marker2 {
+  display: inline-block;
+  background: #232323;
+  border-radius: 100%;
+  height: 10px;
+  width: 10px;
+}
+
+.legend-marker3 {
+  display: inline-block;
+  border: #FAA300;
+  background: #FAA300;
+  border-radius: 100%;
+  height: 10px;
+  width: 10px;
+}
+
+/*legendB */
+
+.legendB {
+  background: black;
+  color: #FFF8F0;
+  opacity: 95%;
+  font-size: 14px;
+  padding: 10px;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 2000000;
+}
+
+.legendB-header {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.legendB-marker {
+  border-radius: 100%;
+  border: #A7FF19;
+  background: #A7FF19;
+  height: 10px;
+  width: 10px;
+}
+
+.legendB-marker2 {
+  display: inline-block;
+  border: #FAA300;
+  background: #FAA300;
+  border-radius: 100%;
+  height: 10px;
+  width: 10px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.custommarker {
+  width: 15px;
+}
+/* slider */
+
+.price-slider {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 40px;
+  width: 200px;
+  height: 5px;
+}
+
+.noUi-vertical .noUi-handle {
+  width: 30px;
+  height: 35px;
+  border: 1px solid #D9D9D9;
+  border-radius: 3px;
+  background: #000;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.noUi-connects {
+  background: #000;
+  height: 300px;
+  
+}
+
+.noUi-connect {
+  background: #A7FF19;
+  width: 100%;
+  height: 15px;
+  height: 300px;
+}
+
+.noUi-tooltip {
+  background: #000;
+  color: #fff;
+  width: 100%;
+}
+
+.noUi-pips {
+  color: gray;
+  width: 100%;
+  margin-top: -5px;
+  font-size: 14px;
+}
+
+/*popup*/
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100000000000000000000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  overflow: hidden;
+  opacity: 1;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #000;
+  margin: 10% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 3px dotted #888;
+  overflow: auto;
+  max-height: 40%;
+  width: 500px; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.leaflet-popup-content {
+  font-family: "Roboto Mono", monospace;
+  background-color: black; 
+  color: #FFF8F0;
+  opacity: 90%;
+}
+
+.leaflet-popup-content img {
+  max-width: 100%;
+  opacity: 100%;
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: black; 
+  opacity: 90%;
+  height: 10%;
+}
+
+/*dropdown*/
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  z-index: 500000000;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: #FFF8F0;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #A7FF19;
+  color: black;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: black;
+  color: #A7FF19;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  
+  
+}
+
+
+} 
+
+.form-control {
+  background: #A7FF19;
+}
+
+fieldset {
+  border-width: 0px;
+  overflow-y: scroll;
+  padding: 5px;
+  border: none;
+}
+
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
