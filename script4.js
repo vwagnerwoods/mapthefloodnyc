@@ -99,9 +99,9 @@ contactlayer.on("featureClicked", function(event) {
   // the clicked feature.
   //
   // I will add the content line-by-line here to make it a little easier to read.
-  var content = "<h4>" + event.data["if_yes_what_was_the_name_of_the_place"] + "<h4>";
+  var content = "<h2><small>" + event.data["if_yes_what_was_the_name_of_the_place"] + "</small><h2>";
   content += "<p> " + "<h3>" + event.data["describe_how_the_flooding_event_affected_you_and_or_the_place"] + " </h3></p>";
-  content += "<p> <h3><small>-" + event.data["name_alias"] + " </small></h3></p>";
+  content += "<p> <h2><small>-" + event.data["name_alias"] + " </small></h2></p>";
 
   // If you're not sure what data is available, log it out:
   console.log(event.data);
